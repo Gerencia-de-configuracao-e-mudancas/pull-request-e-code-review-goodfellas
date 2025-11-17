@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Histórico dos Times - Títulos, Vices e Rebaixamentos</title>
+  <link rel="stylesheet" href="./historico.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>🏆 Histórico dos 15 Principais Times do Brasil</h1>
+    <p>Ordenado por <strong>títulos</strong> (desc) e, em empate, por <strong>vices</strong> (asc por padrão).</p>
+  </header>
+
+  <section class="toolbar">
+    <div class="controls-left">
+      <label class="search">
+        <span>🔎</span>
+        <input id="searchInput" type="text" placeholder="Buscar por time..." />
+      </label>
+      <label class="toggle">
+        <input id="editToggle" type="checkbox" />
+        <span>Modo edição</span>
+      </label>
+    </div>
+    <div class="controls-right">
+      <label class="select">
+        <span>Desempate por vices:</span>
+        <select id="tiebreakSelect">
+          <option value="asc" selected>Menos vices primeiro (padrão)</option>
+          <option value="desc">Mais vices primeiro</option>
+        </select>
+      </label>
+      <button id="resetBtn" class="btn warn" title="Restaurar dados iniciais">Restaurar</button>
+      <button id="exportBtn" class="btn" title="Exportar JSON">Exportar</button>
+      <label for="importFile" class="btn">
+        Importar
+        <input id="importFile" type="file" accept="application/json" hidden />
+      </label>
+    </div>
+  </section>
+
+  <main class="content">
+    <div class="table-wrapper">
+      <table class="ranking-table">
+        <thead>
+          <tr>
+            <th class="pos">#</th>
+            <th class="team">Time</th>
+            <th class="num" title="Quantidade de títulos">Títulos ⬇</th>
+            <th class="num" title="Quantidade de vices">Vices</th>
+            <th class="num" title="Quantidade de rebaixamentos">Rebaixamentos</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <p class="note">
+      Observação: os números carregados inicialmente são <strong>ilustrativos</strong> e podem ser ajustados no "Modo edição".
+      Clique nos valores para editar; os dados ficam salvos no seu navegador.
+    </p>
+  </main>
+
+  <script src="./historico.js"></script>
+</body>
+</html>
