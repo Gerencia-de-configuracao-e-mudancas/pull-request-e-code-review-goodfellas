@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Artilheiros — Campeonato Brasileiro 2025</title>
+  <link rel="stylesheet" href="Artilheiros.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Artilheiros — Campeonato Brasileiro 2025</h1>
+      <p class="lead">Lista dos principais goleadores da competição.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <label for="search" class="sr-only">Pesquisar jogador</label>
+      <input id="search" type="search" placeholder="Pesquisar por jogador ou clube" oninput="filterTable()">
+      <div class="meta">
+        <span>Última atualização: <time id="updated">2025-11-17</time></span>
+      </div>
+    </section>
+
+    <section class="table-wrap" aria-labelledby="table-title">
+      <h2 id="table-title" class="sr-only">Tabela de artilheiros</h2>
+      <table id="scorers" class="scorers" summary="Tabela com posição, jogador, clube, gols, jogos e média de gols">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Jogador</th>
+            <th scope="col">Clube</th>
+            <th scope="col">Gols</th>
+          <!doctype html>
+          <html lang="pt-BR">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+            <title>Artilheiros — Campeonato Brasileiro 2025</title>
+            <link rel="stylesheet" href="Artilheiros.css">
+          </head>
+          <body>
+            <header class="site-header">
+              <div class="container header-inner">
+                <img src="brasileirao-logo.png" alt="Brasileirão 2025" class="logo">
+                <div>
+                  <h1>Artilheiros — Campeonato Brasileiro 2025</h1>
+                  <p class="lead">Lista dos principais goleadores da competição. Dados atualizados automaticamente quando disponível.</p>
+                </div>
+              </div>
+            </header>
+
+            <main class="container">
+              <section class="controls">
+                <label for="search" class="sr-only">Pesquisar jogador</label>
+                <input id="search" type="search" placeholder="Pesquisar por jogador ou clube" oninput="filterTable()">
+                <div class="meta">
+                  <span>Última atualização: <time id="updated">2025-11-17</time></span>
+                </div>
+              </section>
+
+              <section class="table-wrap" aria-labelledby="table-title">
+                <h2 id="table-title" class="sr-only">Tabela de artilheiros</h2>
+                <table id="scorers" class="scorers" summary="Tabela com posição, jogador, clube e gols">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Jogador</th>
+                      <th scope="col">Clube</th>
+                      <th scope="col">Gols</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="#">1</td>
+                      <td data-label="Jogador">Arrascaeta</td>
+                      <td data-label="Clube">Flamengo</td>
+                      <td data-label="Gols">17</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Kaio Jorge</td>
+                      <td>Cruzeiro</td>
+                      <td>17</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Vitor Roque</td>
+                      <td>Palmeiras</td>
+                      <td>16</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Pablo Vegetti</td>
+                      <td>Vasco</td>
+                      <td>14</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Pedro</td>
+                      <td>Flamengo</td>
+                      <td>12</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>Rayan</td>
+                      <td>Vasco</td>
+                      <td>12</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+            </main>
+
+            <footer class="site-footer">
+              <div class="container">
+                <small>Campeonato Brasileiro 2025 — página de artilheiros</small>
+              </div>
+            </footer>
+
+            <script>
+              function filterTable(){
+                const q = document.getElementById('search').value.toLowerCase();
+                const rows = document.querySelectorAll('#scorers tbody tr');
+                rows.forEach(row => {
+                  const texts = Array.from(row.children).map(td => td.textContent.toLowerCase()).join(' ');
+                  row.style.display = texts.includes(q) ? '' : 'none';
+                });
+              }
+            </script>
+          </body>
+          </html>
